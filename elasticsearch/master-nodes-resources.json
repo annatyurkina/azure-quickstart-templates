@@ -67,8 +67,8 @@
         "name": "es-master-set",
         "location": "[resourceGroup().location]",
         "properties": {
-          "platformUpdateDomainCount": 3,
-          "platformFaultDomainCount": 3
+          "platformUpdateDomainCount": 1,
+          "platformFaultDomainCount": 1
         }
       },
       {
@@ -78,7 +78,7 @@
         "location": "[resourceGroup().location]",
         "copy": {
           "name": "masterNodesNicLoop",
-          "count": 3
+          "count": 1
         },
         "properties": {
           "ipConfigurations": [
@@ -102,7 +102,7 @@
         "location": "[resourceGroup().location]",
         "copy": {
           "name": "masterVmLoop",
-          "count": 3
+          "count": 1
         },
         "dependsOn": [
           "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'), copyindex())]",
