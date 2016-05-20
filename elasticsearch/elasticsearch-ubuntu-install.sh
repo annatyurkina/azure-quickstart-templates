@@ -366,7 +366,7 @@ else
     echo "node.data: true" >> /etc/elasticsearch/elasticsearch.yml
 fi
 
-echo "discovery.zen.minimum_master_nodes: 2" >> /etc/elasticsearch/elasticsearch.yml
+echo "discovery.zen.minimum_master_nodes: 1" >> /etc/elasticsearch/elasticsearch.yml
 
 if [[ "${ES_VERSION}" == \2* ]]; then
     echo "network.host: _non_loopback_" >> /etc/elasticsearch/elasticsearch.yml
